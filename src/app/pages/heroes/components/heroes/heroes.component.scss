@@ -1,0 +1,22 @@
+.mat-list {
+  display: table;
+
+  .mat-list-text {
+    text-align: left !important;
+  }
+}
+
+.hero-actions {
+  margin-left: 1rem;
+  padding-bottom: 0;
+
+  .icon__remove {
+    padding-left: 0.5rem;
+    color: darkslategrey;
+    cursor: pointer;
+  }
+}
+
+.icon-grey {
+  color: lightgray;
+}

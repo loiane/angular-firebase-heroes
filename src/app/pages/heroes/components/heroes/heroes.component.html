@@ -1,1 +1,56 @@
-<p>heroes works!</p>
+<div style="margin: 5px;">
+  <h2>Heroes List</h2>
+  <mat-list
+    id="loading-list"
+    *ngIf="!(heroes$ | async) as heroes; else displayList"
+  >
+    <mat-list-item *ngFor="let i of [1, 2, 3, 4, 5]">
+      <img
+        alt="default hero avatar"
+        mat-list-avatar
+        src="/assets/images/default-hero.png"
+      />
+      <h3 mat-line>
+        <app-placeholder
+          [width]="'150px'"
+          [height]="'0.9rem'"
+        ></app-placeholder>
+      </h3>
+      <p mat-line>
+        <app-placeholder
+          [width]="'100px'"
+          [height]="'0.9rem'"
+        ></app-placeholder>
+      </p>
+      <div class="hero-actions">
+        <mat-icon class="icon-grey">favorite</mat-icon>
+      </div>
+    </mat-list-item>
+    <ng-template #displayList>
+      <mat-list-item *ngFor="let hero of heroes; trackBy: trackByFn">
+        <a mat-list-avatar>
+          <img
+            alt="hero avatar"
+            class="cp"
+            mat-list-avatar
+            [src]="
+              hero.default
+                ? hero.avatarThumbnailUrl
+                : 'assets/images/default-hero.png'
+            "
+          />
+        </a>
+        <h3 mat-line [class.cp]="hero.default">
+          <a>
+            {{ hero.name }}
+          </a>
+        </h3>
+        <p mat-line [class.cp]="hero.default">
+          <a>
+            <span>{{ hero.alterEgo }}</span>
+          </a>
+        </p>
+      </mat-list-item>
+    </ng-template>
+  </mat-list>
+</div>

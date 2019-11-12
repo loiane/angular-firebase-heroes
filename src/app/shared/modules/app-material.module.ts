@@ -1,19 +1,17 @@
 import { NgModule } from '@angular/core';
-import { MatToolbarModule } from '@angular/material/toolbar';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
+import { MatListModule } from '@angular/material/list';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
-  declarations: [],
-  imports: [
-    FlexLayoutModule,
-    MatToolbarModule,
-    MatButtonModule
-  ],
   exports: [
     FlexLayoutModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    MatListModule,
+    MatIconModule
   ]
 })
 export class AppMaterialModule { }

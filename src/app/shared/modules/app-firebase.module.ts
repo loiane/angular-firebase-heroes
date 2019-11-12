@@ -1,12 +1,18 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule, FirestoreSettingsToken } from '@angular/fire/firestore';
 
-
+import { environment } from './../../../environments/environment.prod';
 
 @NgModule({
-  declarations: [],
   imports: [
-    CommonModule
-  ]
+    AngularFireModule.initializeApp(environment.firebase, 'angularexampleapp'),
+    AngularFirestoreModule
+  ],
+  exports: [
+    AngularFireModule,
+    AngularFirestoreModule
+  ],
+  providers: [{provide: FirestoreSettingsToken, useValue: {}}]
 })
 export class AppFirebaseModule { }
