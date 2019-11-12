@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
+import { HeroesService } from '../../heroes.service';
+
 @Component({
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
@@ -10,9 +12,10 @@ export class HeroesComponent implements OnInit {
 
   heroes$: Observable<any[]>;
 
-  constructor() { }
+  constructor(private service: HeroesService) { }
 
   ngOnInit() {
+    // this.heroes$ = this.service.getHeroes();
   }
 
   trackByFn(index: any) {

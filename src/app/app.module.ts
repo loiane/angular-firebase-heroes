@@ -1,3 +1,6 @@
+import { environment } from './../environments/environment.prod';
+import { AngularFireModule } from '@angular/fire';
+import { AppFirebaseModule } from './shared/modules/app-firebase.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -16,6 +19,7 @@ import { AppMaterialModule } from './shared/modules/app-material.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    AngularFireModule.initializeApp(environment.firebase),
     AppMaterialModule
   ],
   providers: [],
