@@ -7,10 +7,13 @@
 }
 
 .hero-actions {
+  align-items: center;
+  display: flex;
+  padding-bottom: 1rem;
   margin-left: 1rem;
   padding-bottom: 0;
 
-  .icon__remove {
+  .icon-remove {
     padding-left: 0.5rem;
     color: darkslategrey;
     cursor: pointer;
@@ -19,4 +22,17 @@
 
 .icon-grey {
   color: lightgray;
+  cursor: pointer;
+}
+
+.icon-red {
+  color: #dc143c;
+  cursor: pointer;
+}
+
+.detail {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 14px;
+  text-transform: none;
+  text-decoration: none;
 }

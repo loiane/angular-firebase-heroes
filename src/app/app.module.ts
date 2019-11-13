@@ -19,6 +19,7 @@ import { AppMaterialModule } from './shared/modules/app-material.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    AppFirebaseModule,
     AngularFireModule.initializeApp(environment.firebase),
     AppMaterialModule
   ],

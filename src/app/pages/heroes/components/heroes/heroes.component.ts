@@ -15,7 +15,7 @@ export class HeroesComponent implements OnInit {
   constructor(private service: HeroesService) { }
 
   ngOnInit() {
-    // this.heroes$ = this.service.getHeroes();
+    this.heroes$ = this.service.getHeroes();
   }
 
   trackByFn(index: any) {
